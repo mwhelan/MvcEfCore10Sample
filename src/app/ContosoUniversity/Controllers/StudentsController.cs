@@ -1,12 +1,9 @@
 using System.Linq;
 using System.Threading.Tasks;
-using ContosoUniversity.Core;
 using ContosoUniversity.Core.Domain.Model;
 using ContosoUniversity.Core.Infrastructure.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using ContosoUniversity.Data;
-using ContosoUniversity.Models;
 
 namespace ContosoUniversity.Controllers
 {

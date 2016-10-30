@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "app", "app", "{DDBDD96D-5D7C-4875-89F1-A2C7A67BD654}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5D6CDCFC-D0CD-4A30-ADBA-7E6AE2A3C0F4}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_solution items", "_solution items", "{5D6CDCFC-D0CD-4A30-ADBA-7E6AE2A3C0F4}"
 	ProjectSection(SolutionItems) = preProject
 		global.json = global.json
 	EndProjectSection
