@@ -1,13 +1,11 @@
 ﻿using System;
-using ContosoUniversity.Core;
-using ContosoUniversity.Core.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
-using ContosoUniversity.Data;
+using ContosoUniversity.Core.Infrastructure.Data;
 
-namespace ContosoUniversity.Migrations
+namespace ContosoUniversity.Core.Migrations
 {
     [DbContext(typeof(SchoolContext))]
     partial class SchoolContextModelSnapshot : ModelSnapshot
@@ -18,7 +16,7 @@ namespace ContosoUniversity.Migrations
                 .HasAnnotation("ProductVersion", "1.0.1")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("ContosoUniversity.Models.Course", b =>
+            modelBuilder.Entity("ContosoUniversity.Core.Domain.Model.Course", b =>
                 {
                     b.Property<int>("CourseID");
 
@@ -31,7 +29,7 @@ namespace ContosoUniversity.Migrations
                     b.ToTable("Course");
                 });
 
-            modelBuilder.Entity("ContosoUniversity.Models.Enrollment", b =>
+            modelBuilder.Entity("ContosoUniversity.Core.Domain.Model.Enrollment", b =>
                 {
                     b.Property<int>("EnrollmentID")
                         .ValueGeneratedOnAdd();
@@ -51,7 +49,7 @@ namespace ContosoUniversity.Migrations
                     b.ToTable("Enrollment");
                 });
 
-            modelBuilder.Entity("ContosoUniversity.Models.Student", b =>
+            modelBuilder.Entity("ContosoUniversity.Core.Domain.Model.Student", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd();
@@ -67,14 +65,14 @@ namespace ContosoUniversity.Migrations
                     b.ToTable("Student");
                 });
 
-            modelBuilder.Entity("ContosoUniversity.Models.Enrollment", b =>
+            modelBuilder.Entity("ContosoUniversity.Core.Domain.Model.Enrollment", b =>
                 {
-                    b.HasOne("ContosoUniversity.Models.Course", "Course")
+                    b.HasOne("ContosoUniversity.Core.Domain.Model.Course", "Course")
                         .WithMany("Enrollments")
                         .HasForeignKey("CourseID")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("ContosoUniversity.Models.Student", "Student")
+                    b.HasOne("ContosoUniversity.Core.Domain.Model.Student", "Student")
                         .WithMany("Enrollments")
                         .HasForeignKey("StudentID")
                         .OnDelete(DeleteBehavior.Cascade);

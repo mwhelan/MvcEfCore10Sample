@@ -1,4 +1,6 @@
 ﻿using System;
+using ContosoUniversity.Core;
+using ContosoUniversity.Core.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
