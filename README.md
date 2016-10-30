@@ -1,0 +1,1 @@
+Sample code from my blog post: [Entity Framework Core 1.0.1 Migrations in Separate Assembly](http://www.michael-whelan.net/ef-core-101-migrations-in-separate-assembly/).
